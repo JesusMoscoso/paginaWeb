@@ -1,0 +1,222 @@
+body{
+    margin:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.carrito img {
+    display: none;
+}
+
+
+
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhite:(paragraphs): hsla(0, 0%, 100%, 0.75);
+    --VeryLightGray: (background, headings, buttons): hsl(0, 0%, 95%);
+}
+
+
+header h2{
+    color: var(--DarkCyan);
+}
+
+.contenedor h3{
+    font-size: 25px; 
+}
+
+.iconoYtipo{
+    display: flex;
+    width: 50px;
+    flex-wrap: wrap;
+}
+
+.iconoYtipo h3{
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.contenedorGeneral{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+}
+
+.contenedor{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow:  2px 5px rgb(182, 175, 175);
+    color: white;
+    text-align:justify;
+}
+
+
+.contenedor:hover{
+   background-color: white;
+   color: black;
+}
+
+.botones{
+    width: 130px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+}
+
+.botones:hover{
+    background-color: white;
+    color:black;
+    border:1px solid black ;
+}
+
+
+/*naranja*/
+.conteSedans{
+    background-color: var(--BrightOrange);
+}
+.conteSedans button{
+    color: var(--BrightOrange);
+}
+
+.conteSuvs{
+    background-color: var(--DarkCyan);
+}
+.conteSuvs button{
+    color: var(--DarkCyan);
+}
+
+.conteLuxury{
+    background-color:var(--VeryDarkCyan);
+}
+
+.conteLuxury button{
+   border: 1px solid var(--VeryDarkCyan);
+}
+
+/* tablet */
+@media (min-width: 420px) {
+    .contenedorGeneral {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+      
+      .contenedor {
+        padding: 20px;
+        margin: 10px;
+        width: 35%; 
+        box-sizing: border-box;
+    }
+
+    header h2{
+        color: var(--DarkCyan);
+        font-size: 40px;
+        margin: 0px;
+    }
+
+    header{
+        margin: 0px;
+    }
+
+}
+
+
+
+/*escritorio*/
+@media (min-width: 800px) {
+    
+
+
+    .carrito img{
+        width: 50px;
+        display: block; 
+        margin-bottom: 100px;
+    }
+ 
+
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+ 
+    .contenedorGeneral {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 400px;
+        margin: 5px;
+        gap: 15%; 
+      
+    }
+      
+      .contenedor {
+        padding: 20px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        max-width: 350px;
+        overflow: hidden; 
+        transition: all 1s ease; 
+    }
+
+  
+  .contenedor:hover {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 10px; 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  header{
+    color: var(--DarkCyan);
+    font-size: 40px;
+    margin: 0 auto;
+}
+
+.carrito {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Ajusta la altura del contenedor si es necesario */
+  }
+  
+  .carro {
+    position: absolute;
+    width: 50px;
+    animation: mover 8s linear infinite; 
+  }
+  
+  @keyframes mover {
+    0% {
+      left: 0; 
+      transform: rotateY(0deg); 
+    }
+    50% {
+      left: calc(100% - 50px); /* Llega al lado derecho */
+      transform: rotateY(0deg); /* Mirando hacia adelante */
+    }
+    50.01% {
+      transform: rotateY(180deg); /* Gira para mirar hacia atrás */
+    }
+    100% {
+      left: 0; 
+      transform: rotateY(180deg); 
+    }
+  }
+  
+
+}
